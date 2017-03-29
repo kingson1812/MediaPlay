@@ -10,7 +10,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIDesign", "UIDesign\UIDesi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Global", "Global\Global.csproj", "{E4114738-899D-4D52-82FE-34F4D639E995}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaPlay", "MediaPlay\MediaPlay.csproj", "{955E018F-B63C-4F89-9E2D-8B6EC8D95087}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaPlayWPF", "MediaPlay\MediaPlayWPF.csproj", "{955E018F-B63C-4F89-9E2D-8B6EC8D95087}"
 	ProjectSection(ProjectDependencies) = postProject
 		{2875464B-B306-4940-BC54-ECB26087BFFD} = {2875464B-B306-4940-BC54-ECB26087BFFD}
 	EndProjectSection
