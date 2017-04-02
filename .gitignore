@@ -3,3 +3,5 @@ Debug
 obj
 *.suo
 *.chm
+*.pdb
+*.exe

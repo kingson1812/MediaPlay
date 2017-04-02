@@ -39,6 +39,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\ProjectConfig.cs" />
+    <Compile Include="Log\Log.cs" />
     <Compile Include="Macro\Environment.cs" />
   </ItemGroup>
   <ItemGroup>
