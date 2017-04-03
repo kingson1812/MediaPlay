@@ -5,3 +5,4 @@ obj
 *.chm
 *.pdb
 *.exe
+/Bin/*.manifest

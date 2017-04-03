@@ -3,132 +3,108 @@ using System.Drawing;
 using System.ComponentModel;
 using OpenTK;
 using OpenTK.Graphics.OpenGL;
+using OpenTK.Graphics;
 using OpenTK.Input;
 using Global;
 
+
 namespace MediaPlay
 {
-    class StartScreen
+    class StartScreen : GameWindow
     {
-        private GameWindow m_window;
-        private int m_width;
-        private int m_height;
-
+        Buttons b = new Buttons();
         public StartScreen()
         { }
 
-        public StartScreen(int width, int height)
+        public StartScreen(int width, int height) : base(width, height)
         {
-            this.m_width = width;
-            this.m_height = height;
-        }
-        
-        public StartScreen(GameWindow window)
-        {
-            m_window = window;
+
         }
 
-        private void RegisterEvent()
+        public StartScreen(GameWindow window) : base(window.Width, window.Height, GraphicsMode.Default, window.Title, GameWindowFlags.Default, DisplayDevice.Default)
         {
-            //window event
-            m_window.Load += M_window_Load;
-            m_window.RenderFrame += M_window_RenderFrame;
-            m_window.UpdateFrame += M_window_UpdateFrame;
-            m_window.Closed += M_window_Closed;
-            m_window.Closing += M_window_Closing;
-
-            //Keyboard event
-            m_window.KeyDown += M_window_KeyDown;
-            m_window.KeyUp += M_window_KeyUp;
-
-            //Mouse event
-            m_window.MouseDown += M_window_MouseDown;
-            m_window.MouseUp += M_window_MouseUp;
-            m_window.MouseMove += M_window_MouseMove;
-
 
         }
 
         #region Window
-        private void M_window_Load(object sender, EventArgs e)
+        protected override void OnLoad(EventArgs e)
         {
+            
+            base.OnLoad(e);
             GL.ClearColor(Color.DarkCyan);
         }
 
-        private void M_window_UpdateFrame(object sender, FrameEventArgs e)
+        protected override void OnUpdateFrame(FrameEventArgs e)
         {
-            
+            base.OnUpdateFrame(e);
         }
 
-        private void M_window_RenderFrame(object sender, FrameEventArgs e)
+        protected override void OnRenderFrame(FrameEventArgs e)
         {
+            base.OnRenderFrame(e);
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
             GL.Begin(PrimitiveType.Triangles);
             //Draw object here
+            
             GL.End();
-            m_window.SwapBuffers();
+            this.SwapBuffers();
         }
 
-        private void M_window_Closing(object sender, CancelEventArgs e)
+        protected override void OnClosing(CancelEventArgs e)
         {
-
+            base.OnClosing(e);
         }
 
-        private void M_window_Closed(object sender, EventArgs e)
+        protected override void OnClosed(EventArgs e)
         {
+            base.OnClosed(e);
             Log.LOG_DEBUG("Window closed");
         }
         #endregion //Window
 
         #region Mouse
-        private void M_window_MouseMove(object sender, MouseMoveEventArgs e)
+        protected override void OnMouseMove(MouseMoveEventArgs e)
         {
+            base.OnMouseMove(e);
             Log.LOG_DEBUG(string.Format("Mouse move ({0}),({1})", e.X, e.Y));
         }
 
-        private void M_window_MouseUp(object sender, MouseButtonEventArgs e)
+        protected override void OnMouseUp(MouseButtonEventArgs e)
         {
+            base.OnMouseUp(e);
             Log.LOG_DEBUG(string.Format("Mouse up ({0}),({1})", e.X, e.Y));
         }
 
-        private void M_window_MouseDown(object sender, MouseButtonEventArgs e)
+        protected override void OnMouseDown(MouseButtonEventArgs e)
         {
-            Log.LOG_DEBUG(string.Format("Mouse down ({0}),({1})",e.X,e.Y));
+            base.OnMouseDown(e);
+            Log.LOG_DEBUG(string.Format("Mouse down ({0}),({1})", e.X, e.Y));
         }
         #endregion //Mouse
 
 
         #region Keyboard
-        private void M_window_KeyUp(object sender, KeyboardKeyEventArgs e)
+        protected override void OnKeyUp(KeyboardKeyEventArgs e)
         {
+            base.OnKeyUp(e);
             Log.LOG_DEBUG(string.Format("Key up ({0})", e.Key));
         }
 
-        private void M_window_KeyDown(object sender, KeyboardKeyEventArgs e)
+        protected override void OnKeyDown(KeyboardKeyEventArgs e)
         {
+            base.OnKeyDown(e);
             Log.LOG_DEBUG(string.Format("Key down ({0})", e.Key));
         }
         #endregion //Keyboard
 
         public void Initialization()
         {
-            m_window = new GameWindow();
-            m_window.Width = m_width;
-            m_window.Height = m_height;
-
-            m_window.Title = "Media Play";
-            m_window.Icon = new Icon(_Environment.g_SolutionDir+ "/MediaPlay/Icon.ico");
-
-            //Register events for window and peripherals
-            RegisterEvent();
+            
         }
 
-        public void Run()
+        public new void Run()
         {
-            if (m_window != null)
-                m_window.Run();
-            else
-                Log.LOG_DEBUG("m_window != null");
+            base.Run();
         }
     }
 }

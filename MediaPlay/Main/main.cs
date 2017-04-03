@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Global;
+using System;
+using System.Drawing;
 
 namespace MediaPlay
 {
@@ -8,7 +10,10 @@ namespace MediaPlay
         {
            StartScreen scrStart = new StartScreen(800,600);
            scrStart.Initialization();
-           scrStart.Run();
+            scrStart.Icon = new Icon(_Environment.g_SolutionDir + "/MediaPlay/Icon.ico");
+            scrStart.Title = "Media Play";
+            
+            scrStart.Run();
         }
     }
 }
