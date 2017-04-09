@@ -71,6 +71,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Form\StartScreen.cs" />
@@ -90,6 +91,10 @@
     <ProjectReference Include="..\Global\Global.csproj">
       <Project>{e4114738-899d-4d52-82fe-34f4d639e995}</Project>
       <Name>Global</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UIDesign\UIDesign.csproj">
+      <Project>{2875464b-b306-4940-bc54-ecb26087bffd}</Project>
+      <Name>UIDesign</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

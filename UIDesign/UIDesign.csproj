@@ -42,11 +42,16 @@
     <Compile Include="SourceCode\Button.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="SourceCode\MainFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Global\Global.csproj">

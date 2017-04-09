@@ -29,7 +29,6 @@ namespace MediaPlay
         #region Window
         protected override void OnLoad(EventArgs e)
         {
-            
             base.OnLoad(e);
             GL.ClearColor(Color.DarkCyan);
         }
@@ -43,8 +42,8 @@ namespace MediaPlay
         {
             base.OnRenderFrame(e);
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
+            
             GL.Begin(PrimitiveType.Triangles);
-            //Draw object here
             
             GL.End();
             this.SwapBuffers();
@@ -58,7 +57,7 @@ namespace MediaPlay
         protected override void OnClosed(EventArgs e)
         {
             base.OnClosed(e);
-            Log.LOG_DEBUG("Window closed");
+            Log.VERBOSE("Window closed");
         }
         #endregion //Window
 
@@ -66,19 +65,19 @@ namespace MediaPlay
         protected override void OnMouseMove(MouseMoveEventArgs e)
         {
             base.OnMouseMove(e);
-            Log.LOG_DEBUG(string.Format("Mouse move ({0}),({1})", e.X, e.Y));
+            Log.DEBUG("Mouse move ({0}),({1})", e.X, e.Y);
         }
 
         protected override void OnMouseUp(MouseButtonEventArgs e)
         {
             base.OnMouseUp(e);
-            Log.LOG_DEBUG(string.Format("Mouse up ({0}),({1})", e.X, e.Y));
+            Log.DEBUG("Mouse up ({0}),({1})", e.X, e.Y);
         }
 
         protected override void OnMouseDown(MouseButtonEventArgs e)
         {
             base.OnMouseDown(e);
-            Log.LOG_DEBUG(string.Format("Mouse down ({0}),({1})", e.X, e.Y));
+            Log.DEBUG("Mouse down ({0}),({1})", e.X, e.Y);
         }
         #endregion //Mouse
 
@@ -87,13 +86,13 @@ namespace MediaPlay
         protected override void OnKeyUp(KeyboardKeyEventArgs e)
         {
             base.OnKeyUp(e);
-            Log.LOG_DEBUG(string.Format("Key up ({0})", e.Key));
+            Log.DEBUG("Key up ({0})", e.Key);
         }
 
         protected override void OnKeyDown(KeyboardKeyEventArgs e)
         {
             base.OnKeyDown(e);
-            Log.LOG_DEBUG(string.Format("Key down ({0})", e.Key));
+            Log.DEBUG("Key down ({0})", e.Key);
         }
         #endregion //Keyboard
 
