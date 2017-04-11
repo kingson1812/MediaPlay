@@ -25,8 +25,8 @@ namespace MediaPlay
             Application.SetCompatibleTextRenderingDefault(false);
 
             //No comment
-            MainFrame m = new MainFrame();
-            Application.Run(m);
+            Application.Run(new formMainFrame());
+            
         }
 
         [STAThread]
