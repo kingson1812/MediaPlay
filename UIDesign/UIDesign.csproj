@@ -115,6 +115,15 @@
   <ItemGroup>
     <None Include="Asset\button_repeatnone_background.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\button_noneshuffle_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\button_menu_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\picture_title_background.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

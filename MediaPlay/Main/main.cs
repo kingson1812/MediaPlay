@@ -3,6 +3,7 @@ using UIDesign;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Net;
 using System.Threading;
 using System.Text;
 
@@ -35,15 +36,15 @@ namespace MediaPlay
             //Console setting
             Log.SetConsoleValue(75, 30, ConsoleColor.Black, 100, 9999, Encoding.UTF8, "Media Play");
 
-            //Log.VERBOSE("[Thread] Run GRAPHICS");
-            //ThreadStart graphic = new ThreadStart(GraphicsCall);
-            //Thread mother = new Thread(graphic);
-            //mother.Start();
-
             Log.VERBOSE("[Thread] Run PROGRAM");
-            ThreadStart program = new ThreadStart(ProgramCall);
-            Thread father = new Thread(program);
-            father.Start();
+            Thread program = new Thread(ProgramCall);
+            program.SetApartmentState(ApartmentState.STA);
+            program.Start();
+
+            //Log.VERBOSE("[Thread] Run GRAPHICS");
+            //Thread graphic = new Thread(GraphicsCall);
+            //graphic.SetApartmentState(ApartmentState.STA);
+            //graphic.Start();
         }
     }
 }

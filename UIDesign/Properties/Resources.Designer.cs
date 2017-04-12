@@ -83,6 +83,16 @@ namespace UIDesign.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap button_menu_background {
+            get {
+                object obj = ResourceManager.GetObject("button_menu_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap button_minus_background {
             get {
                 object obj = ResourceManager.GetObject("button_minus_background", resourceCulture);
@@ -96,6 +106,16 @@ namespace UIDesign.Properties {
         internal static System.Drawing.Bitmap button_mute_background {
             get {
                 object obj = ResourceManager.GetObject("button_mute_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap button_noneshuffle_background {
+            get {
+                object obj = ResourceManager.GetObject("button_noneshuffle_background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +196,16 @@ namespace UIDesign.Properties {
         internal static System.Drawing.Bitmap form_image_background {
             get {
                 object obj = ResourceManager.GetObject("form_image_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap picture_title_background {
+            get {
+                object obj = ResourceManager.GetObject("picture_title_background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

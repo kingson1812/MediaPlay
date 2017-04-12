@@ -118,17 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="button_mute_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\button_mute_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button_repeatone_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Asset\button_repeatone_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="button_sound_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\button_sound_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button_repeatnone_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Asset\button_repeatnone_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="button_close_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\button_close_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_previous_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\button_previous_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button_forward_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Asset\button_forward_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="button_play_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Asset\button_play_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,22 +133,34 @@
   <data name="button_shuffle_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Asset\button_shuffle_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="form_image_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\form_image_background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button_previous_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Asset\button_previous_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="button_repeatone_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\button_repeatone_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_repeatall_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\button_repeatall_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button_menu_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Asset\button_menu_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="button_minus_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Asset\button_minus_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="button_forward_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\button_forward_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button_repeatall_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Asset\button_repeatall_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="button_repeatnone_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\button_repeatnone_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="form_image_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Asset\form_image_background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_sound_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Asset\button_sound_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_close_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Asset\button_close_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_noneshuffle_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Asset\button_noneshuffle_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_mute_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Asset\button_mute_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picture_title_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Asset\picture_title_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

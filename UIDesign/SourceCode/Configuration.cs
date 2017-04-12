@@ -15,6 +15,12 @@ public enum PlayStatus
     PAUSE
 }
 
+public enum ShuffleStatus
+{
+    NO,
+    YES
+}
+
 namespace UIDesign
 {
     public static class Configuration
@@ -52,6 +58,20 @@ namespace UIDesign
             {
                 currentStatus = PlayStatus.PLAY;
                 button.Image = Image.FromFile(_Environment.g_SolutionDir + "/UIDesign/Asset/button_pause_background.png");//and pause the other
+            }
+        }
+
+        public static void SetShuffleStatus(ref ShuffleStatus currentStatus, BunifuImageButton button)
+        {
+            if (currentStatus == ShuffleStatus.NO)//next will be YES
+            {
+                currentStatus = ShuffleStatus.YES;
+                button.Image = Image.FromFile(_Environment.g_SolutionDir + "/UIDesign/Asset/button_shuffle_background.png");//display real status
+            }
+            else if (currentStatus == ShuffleStatus.YES)//next will be PLAY
+            {
+                currentStatus = ShuffleStatus.NO;
+                button.Image = Image.FromFile(_Environment.g_SolutionDir + "/UIDesign/Asset/button_noneshuffle_background.png");//display real status
             }
         }
     }
