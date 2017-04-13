@@ -12,7 +12,6 @@ namespace MediaPlay
 {
     class StartScreen : GameWindow
     {
-        Buttons b = new Buttons();
         public StartScreen()
         { }
 

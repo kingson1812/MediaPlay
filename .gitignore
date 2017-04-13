@@ -7,3 +7,9 @@ obj
 *.exe
 /Bin/*.manifest
 /UIDesign/bin/Release
+/MediaPlay/bin
+/Global/bin
+/Bin/Global.dll
+/Bin/MediaPlay.vshost.exe.config
+/Bin/UIDesign.dll
+/Bin/en/UIDesign.resources.dll

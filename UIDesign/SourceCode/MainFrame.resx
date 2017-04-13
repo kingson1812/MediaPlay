@@ -117,10 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="tooltipDescription.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>313, 17</value>
+  </metadata>
   <metadata name="elipseBorder.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="buttonClearList.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgCAYAAACinX6EAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACTSURBVGhD7dgxCoQwEEbhgJXYWO5xPIH38QwirqTJZey8
+        hJ29CFqnGDdTbJUTZN6DHxHS5MNKR0RE5hvHrlmW8/cUK0v3bb3v9f71PD/rdckhYmbbfUs1TVEBkkju
+        UOnTrwEAAAAAAAAAAMgeKH0AAAAAAAAAAAAALv0Z2WPMHip5f4DW+0FfjO0TwlcBiIhs5twLPszRmoIY
+        YTwAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="gradientpanelUpperBar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -1265,13 +1277,4 @@
   <metadata name="dragcontrolMainFrame.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>137, 17</value>
   </metadata>
-  <data name="buttonClearList.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgCAYAAACinX6EAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACTSURBVGhD7dgxCoQwEEbhgJXYWO5xPIH38QwirqTJZey8
-        hJ29CFqnGDdTbJUTZN6DHxHS5MNKR0RE5hvHrlmW8/cUK0v3bb3v9f71PD/rdckhYmbbfUs1TVEBkkju
-        UOnTrwEAAAAAAAAAAMgeKH0AAAAAAAAAAAAALv0Z2WPMHip5f4DW+0FfjO0TwlcBiIhs5twLPszRmoIY
-        YTwAAAAASUVORK5CYII=
-</value>
-  </data>
 </root>

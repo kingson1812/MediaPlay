@@ -1,7 +1,8 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
-using System.Net;
 using System;
+using System.Collections.Generic;
+using Global;
 
 namespace UIDesign
 {
@@ -11,6 +12,7 @@ namespace UIDesign
         public PlayStatus m_buttonPlay;
         public RepeatStatus m_buttonRepeat;
         public ShuffleStatus m_buttonShuffle;
+        public MediaManager m_mediaManager;
 
         private Bunifu.Framework.UI.BunifuElipse elipseBorder;
         private Bunifu.Framework.UI.BunifuDragControl dragcontrolMainFrame;
@@ -36,6 +38,7 @@ namespace UIDesign
         private Panel panelBlankTop;
         private Panel panelMid;
         private Bunifu.Framework.UI.BunifuThinButton2 buttonClearList;
+        private ToolTip tooltipDescription;
         private Bunifu.Framework.UI.BunifuSlider sliderVolume;
 
         public formMainFrame()
@@ -45,6 +48,8 @@ namespace UIDesign
 
         private void InitializeComponent()
         {
+            m_mediaManager = new MediaManager();
+
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMainFrame));
             this.panelControl = new System.Windows.Forms.Panel();
@@ -63,14 +68,15 @@ namespace UIDesign
             this.buttonMinimize = new Bunifu.Framework.UI.BunifuImageButton();
             this.buttonClose = new Bunifu.Framework.UI.BunifuImageButton();
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.separatorLeftMid = new Bunifu.Framework.UI.BunifuSeparator();
             this.panelTrackList = new System.Windows.Forms.Panel();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.buttonSlider = new Bunifu.Framework.UI.BunifuImageButton();
             this.pictureboxTitle = new System.Windows.Forms.PictureBox();
-            this.separatorLeftMid = new Bunifu.Framework.UI.BunifuSeparator();
             this.panelMid = new System.Windows.Forms.Panel();
             this.panelBlankTop = new System.Windows.Forms.Panel();
             this.buttonClearList = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.tooltipDescription = new System.Windows.Forms.ToolTip(this.components);
             this.panelControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonShuffle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonRepeat)).BeginInit();
@@ -118,6 +124,7 @@ namespace UIDesign
             this.sliderVolume.Name = "sliderVolume";
             this.sliderVolume.Size = new System.Drawing.Size(148, 30);
             this.sliderVolume.TabIndex = 13;
+            this.tooltipDescription.SetToolTip(this.sliderVolume, "Adjust volume");
             this.sliderVolume.Value = 0;
             // 
             // buttonShuffle
@@ -132,6 +139,7 @@ namespace UIDesign
             this.buttonShuffle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.buttonShuffle.TabIndex = 10;
             this.buttonShuffle.TabStop = false;
+            this.tooltipDescription.SetToolTip(this.buttonShuffle, "Shuffle mode");
             this.buttonShuffle.Zoom = 10;
             this.buttonShuffle.Click += new System.EventHandler(this.buttonShuffle_Click);
             this.buttonShuffle.MouseLeave += new System.EventHandler(this.button_MouseLeave);
@@ -149,6 +157,7 @@ namespace UIDesign
             this.buttonRepeat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.buttonRepeat.TabIndex = 9;
             this.buttonRepeat.TabStop = false;
+            this.tooltipDescription.SetToolTip(this.buttonRepeat, "Repeat mode");
             this.buttonRepeat.Zoom = 10;
             this.buttonRepeat.Click += new System.EventHandler(this.buttonRepeat_Click);
             this.buttonRepeat.MouseLeave += new System.EventHandler(this.button_MouseLeave);
@@ -166,6 +175,7 @@ namespace UIDesign
             this.buttonVolumeMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.buttonVolumeMax.TabIndex = 6;
             this.buttonVolumeMax.TabStop = false;
+            this.tooltipDescription.SetToolTip(this.buttonVolumeMax, "Maximum volume");
             this.buttonVolumeMax.Zoom = 10;
             this.buttonVolumeMax.Click += new System.EventHandler(this.buttonVolumeMax_Click);
             this.buttonVolumeMax.MouseLeave += new System.EventHandler(this.button_MouseLeave);
@@ -183,6 +193,7 @@ namespace UIDesign
             this.buttonVolumeMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.buttonVolumeMin.TabIndex = 5;
             this.buttonVolumeMin.TabStop = false;
+            this.tooltipDescription.SetToolTip(this.buttonVolumeMin, "Mute volume");
             this.buttonVolumeMin.Zoom = 10;
             this.buttonVolumeMin.Click += new System.EventHandler(this.buttonVolumeMin_Click);
             this.buttonVolumeMin.MouseLeave += new System.EventHandler(this.button_MouseLeave);
@@ -200,6 +211,7 @@ namespace UIDesign
             this.buttonPre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.buttonPre.TabIndex = 4;
             this.buttonPre.TabStop = false;
+            this.tooltipDescription.SetToolTip(this.buttonPre, "Previous");
             this.buttonPre.Zoom = 10;
             this.buttonPre.MouseLeave += new System.EventHandler(this.button_MouseLeave);
             this.buttonPre.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button_MouseMove);
@@ -216,6 +228,7 @@ namespace UIDesign
             this.buttonNext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.buttonNext.TabIndex = 3;
             this.buttonNext.TabStop = false;
+            this.tooltipDescription.SetToolTip(this.buttonNext, "Next");
             this.buttonNext.Zoom = 10;
             this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
             this.buttonNext.MouseLeave += new System.EventHandler(this.button_MouseLeave);
@@ -233,6 +246,7 @@ namespace UIDesign
             this.buttonPlay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.buttonPlay.TabIndex = 2;
             this.buttonPlay.TabStop = false;
+            this.tooltipDescription.SetToolTip(this.buttonPlay, "Play/Pause");
             this.buttonPlay.Zoom = 10;
             this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
             this.buttonPlay.MouseLeave += new System.EventHandler(this.button_MouseLeave);
@@ -251,6 +265,7 @@ namespace UIDesign
             this.processbarPlayTime.Size = new System.Drawing.Size(768, 12);
             this.processbarPlayTime.TabIndex = 1;
             this.processbarPlayTime.TabStop = false;
+            this.tooltipDescription.SetToolTip(this.processbarPlayTime, "Timer process");
             this.processbarPlayTime.Value = 0;
             // 
             // elipseBorder
@@ -281,6 +296,7 @@ namespace UIDesign
             this.gradientpanelUpperBar.Quality = 10;
             this.gradientpanelUpperBar.Size = new System.Drawing.Size(768, 32);
             this.gradientpanelUpperBar.TabIndex = 0;
+            this.gradientpanelUpperBar.Paint += new System.Windows.Forms.PaintEventHandler(this.gradientpanelUpperBar_Paint);
             this.gradientpanelUpperBar.DoubleClick += new System.EventHandler(this.gradientpanelUpperBar_DoubleClick);
             // 
             // buttonMinimize
@@ -295,6 +311,7 @@ namespace UIDesign
             this.buttonMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.buttonMinimize.TabIndex = 1;
             this.buttonMinimize.TabStop = false;
+            this.tooltipDescription.SetToolTip(this.buttonMinimize, "Minimize to taskbar");
             this.buttonMinimize.Zoom = 0;
             this.buttonMinimize.Click += new System.EventHandler(this.buttonMinimize_Click);
             this.buttonMinimize.MouseLeave += new System.EventHandler(this.button_MouseLeave);
@@ -312,6 +329,7 @@ namespace UIDesign
             this.buttonClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.buttonClose.TabIndex = 0;
             this.buttonClose.TabStop = false;
+            this.tooltipDescription.SetToolTip(this.buttonClose, "Close application");
             this.buttonClose.Zoom = 0;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             this.buttonClose.MouseLeave += new System.EventHandler(this.button_MouseLeave);
@@ -331,16 +349,31 @@ namespace UIDesign
             this.panelLeft.Size = new System.Drawing.Size(240, 384);
             this.panelLeft.TabIndex = 3;
             // 
+            // separatorLeftMid
+            // 
+            this.separatorLeftMid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.separatorLeftMid.BackColor = System.Drawing.Color.Transparent;
+            this.separatorLeftMid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
+            this.separatorLeftMid.LineThickness = 1;
+            this.separatorLeftMid.Location = new System.Drawing.Point(238, 0);
+            this.separatorLeftMid.Name = "separatorLeftMid";
+            this.separatorLeftMid.Size = new System.Drawing.Size(2, 384);
+            this.separatorLeftMid.TabIndex = 2;
+            this.separatorLeftMid.Transparency = 255;
+            this.separatorLeftMid.Vertical = true;
+            // 
             // panelTrackList
             // 
             this.panelTrackList.AllowDrop = true;
             this.panelTrackList.AutoScroll = true;
             this.panelTrackList.BackColor = System.Drawing.Color.Transparent;
+            this.panelTrackList.Cursor = System.Windows.Forms.Cursors.Cross;
             this.panelTrackList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelTrackList.Location = new System.Drawing.Point(0, 32);
             this.panelTrackList.Name = "panelTrackList";
             this.panelTrackList.Size = new System.Drawing.Size(240, 352);
             this.panelTrackList.TabIndex = 1;
+            this.tooltipDescription.SetToolTip(this.panelTrackList, "Drag your files here to open them");
             this.panelTrackList.DragDrop += new System.Windows.Forms.DragEventHandler(this.panelTrackList_DragDrop);
             this.panelTrackList.DragEnter += new System.Windows.Forms.DragEventHandler(this.panelTrackList_DragEnter);
             // 
@@ -366,6 +399,7 @@ namespace UIDesign
             this.buttonSlider.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.buttonSlider.TabIndex = 6;
             this.buttonSlider.TabStop = false;
+            this.tooltipDescription.SetToolTip(this.buttonSlider, "About me");
             this.buttonSlider.Zoom = 10;
             this.buttonSlider.Click += new System.EventHandler(this.buttonSlider_Click);
             this.buttonSlider.MouseLeave += new System.EventHandler(this.button_MouseLeave);
@@ -381,19 +415,6 @@ namespace UIDesign
             this.pictureboxTitle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureboxTitle.TabIndex = 0;
             this.pictureboxTitle.TabStop = false;
-            // 
-            // separatorLeftMid
-            // 
-            this.separatorLeftMid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.separatorLeftMid.BackColor = System.Drawing.Color.Transparent;
-            this.separatorLeftMid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.separatorLeftMid.LineThickness = 1;
-            this.separatorLeftMid.Location = new System.Drawing.Point(238, 0);
-            this.separatorLeftMid.Name = "separatorLeftMid";
-            this.separatorLeftMid.Size = new System.Drawing.Size(2, 384);
-            this.separatorLeftMid.TabIndex = 2;
-            this.separatorLeftMid.Transparency = 255;
-            this.separatorLeftMid.Vertical = true;
             // 
             // panelMid
             // 
@@ -441,7 +462,17 @@ namespace UIDesign
             this.buttonClearList.Size = new System.Drawing.Size(64, 32);
             this.buttonClearList.TabIndex = 0;
             this.buttonClearList.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tooltipDescription.SetToolTip(this.buttonClearList, "Clear all loaded files");
             this.buttonClearList.Click += new System.EventHandler(this.buttonClearList_Click);
+            // 
+            // tooltipDescription
+            // 
+            this.tooltipDescription.AutoPopDelay = 3000;
+            this.tooltipDescription.BackColor = System.Drawing.Color.White;
+            this.tooltipDescription.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.tooltipDescription.InitialDelay = 500;
+            this.tooltipDescription.ReshowDelay = 100;
+            this.tooltipDescription.ToolTipTitle = "Hint";
             // 
             // formMainFrame
             // 
@@ -495,25 +526,12 @@ namespace UIDesign
 
         private void button_MouseMove(object sender, MouseEventArgs e)
         {
-            Bunifu.Framework.UI.BunifuImageButton b = (Bunifu.Framework.UI.BunifuImageButton)sender;
-            switch (b.Name)
-            {
-                case "buttonMinimize":
-                    b.BackColor = Color.White;
-                    break;
-                case "buttonClose":
-                    b.BackColor = Color.Red;
-                    break;
-                default:
-                    b.BackColor = Color.FromArgb(175, 255, 197);
-                    break;
-            }
+            Effect.button_MouseMove(sender, e);
         }
 
         private void button_MouseLeave(object sender, EventArgs e)
         {
-            Bunifu.Framework.UI.BunifuImageButton b = (Bunifu.Framework.UI.BunifuImageButton)sender;
-            b.BackColor = Color.Transparent;
+            Effect.button_MouseLeave(sender, e);
         }
 
         private void buttonMinimize_Click(object sender, EventArgs e)
@@ -524,6 +542,16 @@ namespace UIDesign
         private void buttonPlay_Click(object sender, EventArgs e)
         {
             Configuration.SetPlayStatus(ref m_buttonPlay, buttonPlay);
+            try
+            {
+                if(m_mediaManager!=null)
+                    m_mediaManager.Play(m_buttonRepeat, m_buttonShuffle, m_buttonPlay);
+            }
+            catch(Exception ex)
+            {
+                Log.ERROR(ex.Message.ToString());
+            }
+
         }
 
         private void formMainFrame_Load(object sender, EventArgs e)
@@ -568,7 +596,8 @@ namespace UIDesign
 
         private void buttonSlider_Click(object sender, EventArgs e)
         {
-            
+            frmAbout about = new frmAbout();
+            about.ShowDialog();
         }
 
         private void buttonClearList_Click(object sender, EventArgs e)
@@ -583,7 +612,21 @@ namespace UIDesign
 
         private void panelTrackList_DragDrop(object sender, DragEventArgs e)
         {
-            string[] dataArray=(string[])e.Data.GetData(DataFormats.FileDrop, false);
+            string[] dataArray = (string[])e.Data.GetData(DataFormats.FileDrop, false);
+            List<Media> ml = new List<Media>();
+            for (int i = 0; i < dataArray.Length; i++)
+            {
+                Media mi = new Media();
+                mi.index = i;
+                mi.filePath = dataArray[i];
+                ml.Add(mi);
+            }
+            m_mediaManager.SetMediaList(ml);
+        }
+
+        private void gradientpanelUpperBar_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

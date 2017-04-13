@@ -117,53 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="button_repeatone_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\button_repeatone_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="elipseBorder.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="gradientpanelUpperBar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADASURBVChTdc45D4JAGIThz3jEO57EI/7/XmE5lqPARAsL
+        Ck20sLDQRAoLCwqbURYW1IT+ycxL5AEl94WyE6HqPFGzH6jzOxr8ipZ1Qcc6o2seQQK5ESoS2Tlqp6hn
+        7EHxUoZ4mCMzRieB+noAyu9CNPktucvQAQMjwFDfgf7vZJNYStGYbUA/4WIpRZ87iRTNBxU1xWjEtlCY
+        j4nmgQQSd0mTvEvQWqCpykHfTTJc3KVLM41jrjJQUZNcitFitcQbFB8F+s6gLD0AAAAASUVORK5CYII=
+</value>
   </data>
-  <data name="button_play_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\button_play_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_repeatnone_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\button_repeatnone_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_forward_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\button_forward_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_menu_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\button_menu_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_shuffle_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\button_shuffle_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_previous_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\button_previous_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_minus_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\button_minus_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_repeatall_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\button_repeatall_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="picture_title_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\picture_title_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="form_image_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\form_image_background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_sound_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\button_sound_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_close_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\button_close_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_noneshuffle_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\button_noneshuffle_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_mute_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\button_mute_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="form_about_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\form_about_background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <metadata name="dragcontrolUpperPanel.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>137, 17</value>
+  </metadata>
 </root>
